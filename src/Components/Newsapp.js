@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Card from './Card'
 
 const Newsapp = () => {
+    try{
     const [search, setSearch] = useState("india");
     const [newsData, setNewsData] = useState(null)
     const API_KEY = "9c3ed8ee95884dec979460a60f96675b";
@@ -28,6 +29,11 @@ const Newsapp = () => {
     const userInput = (event) =>{
         setSearch(event.target.value)
     }
+}
+catch(error){
+    console.log(error);
+}
+
 
   return (
     <div>
