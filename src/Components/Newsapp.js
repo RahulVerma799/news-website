@@ -12,7 +12,7 @@ const Newsapp = () => {
         const response = await fetch(`${PROXY_URL}https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`);
         const jsonData = await response.json();
         console.log(jsonData.articles);
-        let dt = jsonData.articles.slice(0,10)
+        let dt = jsonData.articles
         setNewsData(dt)
         
     }
